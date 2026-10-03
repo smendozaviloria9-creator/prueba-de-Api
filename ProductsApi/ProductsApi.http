@@ -1,0 +1,32 @@
+@host = http://localhost:5041
+
+### Create
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "description": "Laptop gamer",
+  "price": 3500000,
+  "stock": 10
+}
+
+### Get all
+GET {{host}}/api/products
+
+### Get by id
+GET {{host}}/api/products/1
+
+### Update
+PUT {{host}}/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Laptop Pro",
+  "description": "Laptop actualizada",
+  "price": 4000000,
+  "stock": 8
+}
+
+### Delete
+DELETE {{host}}/api/products/1
